@@ -41,7 +41,7 @@ class Module(models.Model):
                                related_name='modules',
                                on_delete=models.CASCADE)
     description = models.TextField(blank=True)
-    order = OrderField(blank=True,for_fields=['course'])
+    order = OrderField(blank=True, for_fields=['course'])
 
     class Meta:
         ordering = ['order']
