@@ -27,6 +27,9 @@ class Course(models.Model):
                                 on_delete=models.CASCADE)
     overview = models.TextField()
     created = models.DateTimeField(auto_now_add=True)
+    students = models.ManyToManyField(User,
+                                      related_name='courses_joined',
+                                      blank=True)
 
     class Meta:
         ordering = ['-created']
