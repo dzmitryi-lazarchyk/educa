@@ -153,5 +153,8 @@ INTERNAL_IPS = [
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'courses.api.authentication.CustomAuthentication',
     ]
 }
