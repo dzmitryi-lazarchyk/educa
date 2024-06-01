@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'daphne',
     'courses.apps.CoursesConfig',
     'students.apps.StudentsConfig',
     'django.contrib.admin',
@@ -44,6 +45,8 @@ INSTALLED_APPS = [
     'debug_toolbar',
     'redisboard',
     'rest_framework',
+    'chat',
+    'channels',
 ]
 
 MIDDLEWARE = [
@@ -158,3 +161,5 @@ REST_FRAMEWORK = {
         'courses.api.authentication.CustomAuthentication',
     ]
 }
+
+ASGI_APPLICATION = 'educa.asgi.application'
