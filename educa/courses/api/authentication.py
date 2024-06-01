@@ -6,8 +6,6 @@ from rest_framework.request import Request
 
 class CustomAuthentication(BaseAuthentication):
     def authenticate(self, request: Request):
-        for i, k in request.META.items():
-            print(f'key:{i}, value:{k}')
         username = request.META.get('HTTP_USERNAME')
         password = request.META.get('HTTP_PASSWORD')
         if not username or not password:
