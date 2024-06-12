@@ -1,5 +1,5 @@
 # Pull official Python Docker image
-FROM python 3.12.1
+FROM python:3.10.6
 
 # Set environment variables
 ENV PYTHONDONTWRITEBYCODE=1
